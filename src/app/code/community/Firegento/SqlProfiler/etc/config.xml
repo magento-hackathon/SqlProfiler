@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Firegento_SqlProfiler>
+			<version>0.1.0</version>
+		</Firegento_SqlProfiler>
+	</modules>
+	<global>
+		<models>
+			<firegento_sqlprofiler>
+				<class>Firegento_SqlProfiler_Model</class>
+			</firegento_sqlprofiler>
+            <core>
+            	<rewrite>
+            		<resource_type_db_pdo_mysql>Firegento_SqlProfiler_Model__Resource_Type_Db_Pdo_Mysql</resource_type_db_pdo_mysql>
+            	</rewrite>
+            </core>
+        </models>
+		<events>
+			<controller_front_init_before>
+				<observers>
+					<firegento_sqlprofiler>
+						<class>Firegento_SqlProfiler_Model_Observer</class>
+						<method>controllerFrontInitBefore</method>
+					</firegento_sqlprofiler>
+				</observers>
+			</controller_front_init_before>
+			<http_response_send_before>
+				<observers>
+					<firegento_sqlprofiler>
+						<class>Firegento_SqlProfiler_Model_Observer</class>
+						<method>controllerFrontDispatchBeforeResponse</method>
+					</firegento_sqlprofiler>
+				</observers>
+			</http_response_send_before>
+		</events>
+	</global>
+</config>

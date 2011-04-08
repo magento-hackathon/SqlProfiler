@@ -1,0 +1,11 @@
+<config>
+	<modules>
+		<Firegento_SqlProfiler>
+			<active>true</active>
+			<codePool>community</codePool>
+            <depends>
+                <Mage_Core />
+            </depends>
+		</Firegento_SqlProfiler>
+	</modules>
+</config>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+	<global>
+		<resources>
+			<default_setup>
+				<connection>
+
+						<profiler>
+							<class><![CDATA[Zend_Db_Profiler_Firebug]]></class>
+							<enabled>true</enabled>
+							<arguments>
+								<argument>All DB Queries</argument>
+							</arguments>
+						</profiler>
+
+				</connection>
+			</default_setup>
+		</resources>
+        <resource>
+            <connection>
+                <types>
+                    <pdo_mysql>
+                        <class>Firegento_SqlProfiler_Model_Resource_Type_Db_Pdo_Mysql</class>
+                    </pdo_mysql>
+                </types>
+            </connection>
+        </resource>		
+	</global>
+</config>

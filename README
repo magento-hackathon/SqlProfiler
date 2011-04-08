@@ -1,0 +1,1 @@
+The headers will only be sent if the firephp add-on for firefox is installed, cause it will modify the request header. This modification will be checked in lib/Zend/Wildfire/Channel/HttpHeaders.php in the function isReady().
